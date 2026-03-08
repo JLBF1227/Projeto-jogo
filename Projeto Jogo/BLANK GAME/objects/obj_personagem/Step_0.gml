@@ -32,7 +32,7 @@ if keyboard_check(ord("E"))and(pode_dash){
 	pode_dash = 0;
 	alarm[1] = cd_dash * room_speed;
 }
-//Dash Lento / Imortal
+/*Dash Lento / Imortal
 if keyboard_check(ord("Q"))and(pode_dash){
 	global.spd = 10;
 	global.pode_dar_dano = 0;
@@ -41,5 +41,5 @@ if keyboard_check(ord("Q"))and(pode_dash){
 	alarm[1] = cd_dash * room_speed;
 	
 }
-
+*/
 

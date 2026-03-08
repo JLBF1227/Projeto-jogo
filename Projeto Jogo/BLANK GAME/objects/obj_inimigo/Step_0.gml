@@ -23,15 +23,13 @@ if global.vida > 0 {
         x += lengthdir_x(spd, direcao); 
         y += lengthdir_y(spd, direcao);
 		
-    }
-	
-	//Dano
-	if place_meeting(x+lengthdir_x(spd, direcao), y+lengthdir_y(spd,direcao), obj_personagem) and global.pode_dar_dano{
-		global.vida--;
-		global.pode_dar_dano = 0;
-		alarm[0] = cldwn_hit * room_speed;
+		obj_espada_inimigo.x += lengthdir_x(spd, direcao); 
+        obj_espada_inimigo.y += lengthdir_y(spd, direcao);
 		
     }
+	
 }
+
+
 
 

@@ -1,0 +1,1 @@
+pode_bater = 1;

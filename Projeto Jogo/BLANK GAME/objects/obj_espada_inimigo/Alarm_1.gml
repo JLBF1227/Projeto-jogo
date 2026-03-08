@@ -1,0 +1,1 @@
+pode_dar_dano = 1;

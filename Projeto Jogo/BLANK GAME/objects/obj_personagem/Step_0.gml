@@ -43,3 +43,9 @@ if keyboard_check(ord("Q"))and(pode_dash){
 }
 */
 
+
+
+//Tamanho (provisório)
+image_xscale = 3;
+image_yscale = 3;
+

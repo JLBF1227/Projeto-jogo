@@ -1,3 +1,7 @@
+	if (invencivel > 0) {
+    invencivel -= 1;
+}
+
 //Seguir
 if global.vida > 0 {
 
@@ -28,6 +32,18 @@ if global.vida > 0 {
 		
     }
 	
+	if (place_meeting(x, y, obj_espada_personagem)) {
+    if (obj_espada_personagem.atacando and obj_espada_personagem.image_index >= 1 and invencivel <= 0) {
+        vida -= 1;
+		invencivel = 30;
+    }
+}
+	if vida = 0{
+		global.inimigo_vivo = 0;
+		
+		instance_destroy();
+		instance_destroy(obj_espada_inimigo);
+	}
 }
 
 

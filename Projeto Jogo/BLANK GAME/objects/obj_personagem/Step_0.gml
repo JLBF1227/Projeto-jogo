@@ -40,9 +40,20 @@ if hmove != 0 or vmove != 0 {
 }
 
 //Dash Rápido
-if (mouse_check_button_pressed(mb_right)) and(pode_dash){
+if (mouse_check_button_pressed(mb_right) 
+&& pode_dash 
+&& stamina >= custo_dash
+&& estado == "normal") {
+
+    stamina -= custo_dash;
+    stamina_delay = 60;
+
+    estado = "dash";
+
     global.spd = 20;
+
     alarm[0] = tempo_dash_rapido * room_speed;
+
     pode_dash = 0;
     alarm[1] = cd_dash * room_speed;
 }
@@ -57,21 +68,56 @@ if keyboard_check(ord("Q"))and(pode_dash){
 }
 */
 
+// Olhar para o mouse
 var ang = point_direction(x, y, mouse_x, mouse_y);
 var dir = floor(((ang + 22.5) mod 360) / 45);
 
 image_index = dir;
 
 }
-
+// Morte
 if global.vida <= 0{
     image_index = 8;
     image_speed = 0;
     instance_destroy(obj_espada_personagem);
-
 
 }
 
 //Tamanho (provisório)
 image_xscale = 2;
 image_yscale = 2;
+//-----------------------------------------------------------------------
+
+// Sistema de stamina
+// tempo de espera antes de regenerar
+if (stamina_delay > 0) {
+    stamina_delay -= 1;
+}
+
+// regeneração
+if (stamina_delay <= 0 && stamina < stamina_max) {
+
+    stamina += stamina_regen;
+
+    // regeneração acelera com o tempo
+    stamina_regen = min(stamina_regen + 0.01, stamina_regen_max);
+
+}
+
+// impedir ultrapassar
+stamina = clamp(stamina, 0, stamina_max);
+
+if (obj_espada_personagem.atacando and !gastou_stamina) {
+
+    stamina -= 20;
+    stamina_delay = 60;
+    stamina_regen = 0.2;
+
+    gastou_stamina = true;
+}
+
+// resetar quando ataque termina
+if (!obj_espada_personagem.atacando) {
+    gastou_stamina = false;
+}
+//----------------------------------------------------------------------------------------------------------

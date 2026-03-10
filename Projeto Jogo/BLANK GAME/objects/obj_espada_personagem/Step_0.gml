@@ -42,3 +42,12 @@ if (mao == 0) {
 
 
 }
+// Não bater sem stamina
+if (mouse_check_button_pressed(mb_left) 
+&& cooldown <= 0 
+&& obj_personagem.stamina >= 20) {
+
+    atacando = true;
+    image_speed = 1;
+    cooldown = tempo_cooldown;
+}

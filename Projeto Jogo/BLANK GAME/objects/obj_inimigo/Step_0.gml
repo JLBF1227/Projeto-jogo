@@ -15,7 +15,7 @@ if global.vida > 0 {
         if place_meeting(x+lengthdir_x(spd+i, direcao), y+lengthdir_y(spd+i, direcao), obj_personagem) {
 
             seguindo = 1;
-            alarm[1] = cldwn_parar_de_seguir * room_speed;
+            alarm[0] = cldwn_parar_de_seguir * room_speed;
             i = 0;
             break;
         }
@@ -37,7 +37,7 @@ if global.vida > 0 {
 	if (place_meeting(x, y, obj_espada_personagem)) {
     if (obj_espada_personagem.atacando and obj_espada_personagem.image_index >= 1 and invencivel <= 0) {
         vida -= 1;
-		invencivel = 30;
+		invencivel = 60;
     }
 }
 	if vida = 0{

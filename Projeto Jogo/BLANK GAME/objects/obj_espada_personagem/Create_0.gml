@@ -9,15 +9,6 @@ atacando = false;
 image_xscale = 3;
 image_yscale = 3;
 
+mao = 0; // 0 direita 1 esquerda
+
 //------------------------------------------------------
-
-/*dist = 40;
-angulo = 0;
-vel_ataque = 20;
-
-atacando = false;
-pode_dar_dano = false;
-
-cooldown = 0;
-tempo_cooldown = 30;
-*/

@@ -1,6 +1,7 @@
 invencivel = 0;
 
-vida = 10;
+vida = 5;
+vida_max = 5;
 spd = 4;
 
 cldwn_parar_de_seguir = 3;

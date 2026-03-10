@@ -28,6 +28,7 @@
   "resources":[
     {"id":{"name":"font_morte","path":"fonts/font_morte/font_morte.yy",},},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_espada_inimigo","path":"objects/obj_espada_inimigo/obj_espada_inimigo.yy",},},
     {"id":{"name":"obj_espada_personagem","path":"objects/obj_espada_personagem/obj_espada_personagem.yy",},},
     {"id":{"name":"obj_gui","path":"objects/obj_gui/obj_gui.yy",},},

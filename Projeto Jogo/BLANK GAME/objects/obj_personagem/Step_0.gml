@@ -1,12 +1,33 @@
 //Andar
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
+if global.vida > 0{
+	
 key_up = keyboard_check(ord("W"));
+
+	if keyboard_check(ord("W")){
+		image_index = 0;
+	}
+
+key_left = keyboard_check(ord("A"));
+	if keyboard_check(ord("A")){
+		image_index = 1;
+	}
+
 key_down = keyboard_check(ord("S"));
+	if keyboard_check(ord("S")){
+		image_index = 2;
+	}
+
+key_right = keyboard_check(ord("D"));
+	if keyboard_check(ord("D")){
+		image_index = 3;
+	}
+
+
 var hmove = key_right - key_left;
 var vmove = key_down - key_up;
 hsp = hmove * global.spd;
 vsp = vmove * global.spd;
+}
 
 //Colisão
 if place_meeting(x + hsp, y, obj_parede) or place_meeting(x + hsp, y, obj_inimigo){
@@ -43,7 +64,13 @@ if keyboard_check(ord("Q"))and(pode_dash){
 }
 */
 
-
+if global.vida <= 0{
+	image_index = 4;
+	image_speed = 0;
+	instance_destroy(obj_espada_personagem);
+	
+	
+}
 
 //Tamanho (provisório)
 image_xscale = 3;

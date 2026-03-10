@@ -10,9 +10,11 @@
   },
   "defaultScriptType":1,
   "Folders":[
-    {"$GMFolder":"","%Name":"Script","folderPath":"folders/Script.yy","name":"Script","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objetos","folderPath":"folders/Objetos.yy","name":"Objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Guis","folderPath":"folders/Objetos/Guis.yy","name":"Guis","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Inimigos","folderPath":"folders/Objetos/Inimigos.yy","name":"Inimigos","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Personagem","folderPath":"folders/Objetos/Personagem.yy","name":"Personagem","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Script","folderPath":"folders/Script.yy","name":"Script","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
@@ -24,6 +26,7 @@
   },
   "name":"BLANK GAME",
   "resources":[
+    {"id":{"name":"font_morte","path":"fonts/font_morte/font_morte.yy",},},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"obj_espada_inimigo","path":"objects/obj_espada_inimigo/obj_espada_inimigo.yy",},},
     {"id":{"name":"obj_espada_personagem","path":"objects/obj_espada_personagem/obj_espada_personagem.yy",},},

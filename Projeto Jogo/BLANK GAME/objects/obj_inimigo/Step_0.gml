@@ -6,6 +6,7 @@
 if global.vida > 0 {
 
     direcao = point_direction(x, y, obj_personagem.x, obj_personagem.y);
+	
 
     var i = 0;
 
@@ -26,6 +27,7 @@ if global.vida > 0 {
 	and !place_meeting(x+lengthdir_x(spd + global.spd, direcao), y+lengthdir_y(spd + global.spd,direcao), obj_personagem){
         x += lengthdir_x(spd, direcao); 
         y += lengthdir_y(spd, direcao);
+		
 		
 		obj_espada_inimigo.x += lengthdir_x(spd, direcao); 
         obj_espada_inimigo.y += lengthdir_y(spd, direcao);

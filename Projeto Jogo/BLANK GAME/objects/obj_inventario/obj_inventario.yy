@@ -9,8 +9,8 @@
   "name":"obj_inventario",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Guis",
+    "path":"folders/Objetos/Guis.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,1 +1,1 @@
-atacando = false;
+//atacando = false;

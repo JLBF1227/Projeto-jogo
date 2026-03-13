@@ -20,4 +20,3 @@ function add_item(item) {
 
 global.item_parede = Item("Parede", spr_parede);
 global.item_inimigo = Item("Inimigo", spr_inimigo);
-global.item_espada = Item("Espada", spr_espada);

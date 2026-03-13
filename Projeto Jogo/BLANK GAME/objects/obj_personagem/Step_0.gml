@@ -1,6 +1,6 @@
-//Andar
 if global.vida > 0{
 
+//Andar
 key_up = keyboard_check(ord("W"));
 key_left = keyboard_check(ord("A"));
 key_down = keyboard_check(ord("S"));
@@ -16,7 +16,6 @@ if hmove != 0 or vmove != 0 {
     image_index = move_direction / 45;
 
     //Colisão
-
     novo_x = x + lengthdir_x(global.spd, move_direction);
     novo_y = y + lengthdir_y(global.spd,move_direction);
     novo_x_espada = obj_espada_personagem.x + lengthdir_x(global.spd, move_direction);
@@ -74,20 +73,6 @@ var dir = floor(((ang + 22.5) mod 360) / 45);
 
 image_index = dir;
 
-}
-// Morte
-if global.vida <= 0{
-    image_index = 8;
-    image_speed = 0;
-    instance_destroy(obj_espada_personagem);
-
-}
-
-//Tamanho (provisório)
-image_xscale = 2;
-image_yscale = 2;
-//-----------------------------------------------------------------------
-
 // Sistema de stamina
 // tempo de espera antes de regenerar
 if (stamina_delay > 0) {
@@ -110,7 +95,7 @@ stamina = clamp(stamina, 0, stamina_max);
 if (obj_espada_personagem.atacando and !gastou_stamina) {
 
     stamina -= 20;
-    stamina_delay = 60;
+    stamina_delay = 120;
     stamina_regen = 0.2;
 
     gastou_stamina = true;
@@ -120,4 +105,17 @@ if (obj_espada_personagem.atacando and !gastou_stamina) {
 if (!obj_espada_personagem.atacando) {
     gastou_stamina = false;
 }
+
+}
+// Morte
+if global.vida <= 0{
+    image_index = 8;
+    image_speed = 0;
+    instance_destroy(obj_espada_personagem);
+
+}
+
+//Tamanho (provisório)
+image_xscale = 2;
+image_yscale = 2;
 //----------------------------------------------------------------------------------------------------------

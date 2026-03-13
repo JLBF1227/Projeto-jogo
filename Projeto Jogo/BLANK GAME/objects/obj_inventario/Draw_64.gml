@@ -1,3 +1,5 @@
+draw_set_font(Font1);
+
 /// Draw GUI Event do Inventário
 
 var mx = device_mouse_x_to_gui(0);

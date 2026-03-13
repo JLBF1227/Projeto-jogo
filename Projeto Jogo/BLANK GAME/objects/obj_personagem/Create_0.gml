@@ -21,7 +21,7 @@ vida_max = 5;
 stamina = 100;
 stamina_max = 100;
 
-stamina_regen = 0.2;
+stamina_regen = 0.1;
 stamina_regen_max = 1.2;
 
 stamina_delay = 0;

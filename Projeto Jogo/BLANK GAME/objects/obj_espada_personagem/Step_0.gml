@@ -3,11 +3,16 @@ if (cooldown > 0) {
 }
 
 // iniciar ataque
-    if (mouse_check_button_pressed(mb_left) and cooldown <= 0) {
+// Não bater sem stamina
+if (mouse_check_button_pressed(mb_left) 
+and cooldown <= 0 
+and obj_personagem.stamina >= 20) {
+
     atacando = true;
     image_speed = 1;
     cooldown = tempo_cooldown;
 }
+
 
 if (image_index >= 4) {
     image_speed = 0;
@@ -41,13 +46,4 @@ if (mao == 0) {
     image_yscale = 2;
 
 
-}
-// Não bater sem stamina
-if (mouse_check_button_pressed(mb_left) 
-&& cooldown <= 0 
-&& obj_personagem.stamina >= 20) {
-
-    atacando = true;
-    image_speed = 1;
-    cooldown = tempo_cooldown;
 }

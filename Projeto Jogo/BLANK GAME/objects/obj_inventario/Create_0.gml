@@ -1,3 +1,7 @@
+global.gold = 0;
+global.xp = 0;
+global.level = 1;
+
 tamanho_slot = 100;
 n_colunas = 10;
 n_linhas = 5;
@@ -18,7 +22,6 @@ tamanho_inventario = n_colunas * n_linhas
 
 inventario = array_create(tamanho_inventario, 0);
 
-add_item(global.item_espada);
 add_item(global.item_inimigo);
 add_item(global.item_parede);
 
